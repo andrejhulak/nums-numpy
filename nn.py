@@ -50,6 +50,7 @@ class NeuralNet(object):
 
         x = self.output_layer.T @ x + self.bias_vec[-1]
 
+        # output is raw logits
         return x
     
     def backward(self, loss):

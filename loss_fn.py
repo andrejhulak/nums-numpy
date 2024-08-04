@@ -1,8 +1,11 @@
 import numpy as np
+from nn import softmax
 
 def cross_entropy_loss(y_pred, y_true):
 
     assert len(y_true) == len(y_pred)
+
+    y_pred = softmax(y_pred)
 
     ret = 0
 
